@@ -13,6 +13,7 @@ body{
 	display: flex;
 	align-items: center;
 	border-bottom: solid #ABEDD8;
+	animation: top 1.6s linear;
 
 	@media(min-width:650px){
 		margin: 0 15%;
@@ -51,6 +52,7 @@ h1 span,h2 span{
 	justify-content: space-around;
 	align-items: center;
 	height: 10%;
+	animation: top 1.4s linear;
 
 	img{
 		width: 80px;
@@ -71,6 +73,7 @@ h1 span,h2 span{
 .all__about__pict{
 	margin: 0 auto;
 	height: 50%px;
+	animation: top 1.2s linear;
 
 		@media(min-width:650px){
 			width:400px;
@@ -91,6 +94,7 @@ h1 span,h2 span{
 	justify-content: center;
 	display: flex;
 	align-items: center;
+	animation: top 1s linear;
 
 	@media(min-width:650px){
 		margin: 0 25%;
@@ -107,7 +111,7 @@ h1 span,h2 span{
 		text-align: center;
 
 		@media(min-width:650px){
-			font-size: 1.8rem;
+			font-size: 2.5rem;
 		}
 
 		@media(min-width:1300px){
@@ -123,15 +127,16 @@ h1 span,h2 span{
 	display: flex;
 	align-items: center;	
 	justify-content: center;
+	animation: top 0.8s linear;
 
 	p{
-		font-size: 1.7rem;
+		font-size: 1.6rem;
 		text-align: center;	
 	 	font-family: "basker";
 		color: #3D84A8;
 
 		@media(min-width:650px){
-			font-size: 1.6rem;
+			font-size: 1.5rem;
 		}
 		@media(min-width:1300px){
 			font-size: 1.2rem;
@@ -147,6 +152,7 @@ h1 span,h2 span{
 	justify-content:space-around;
 	align-items: center;
 	height: 10%;
+	animation: left 2s linear;
 
 	a{
 		font-size: 3rem;
@@ -164,12 +170,29 @@ h1 span,h2 span{
 		}
 	}
 
-	a:hover{
-		border:2px solid #ABEDD8;
-		transition:0.75s ease;
-		border-radius:10px;
+	.btn{
+		 $color: #7cf07f;
+	  $color2: #88d6f3;
+	  color: $color;
+	  
+	  &:hover {
+	    animation: blinds 0.75s linear forwards;
+	    background: linear-gradient(0deg, $color 25%, transparent 25%) 0 0 / 0.5em 0.5em
+	              , linear-gradient(0deg, $color2 50%, transparent 50%) 0 0 / 1em 1em;
+	    color: adjust-hue($color,180);
+	  }
 	}
+
+	@keyframes blinds {
+	  100% {
+	    background-position: 0 0, 0 -3em;
+	    background-size: 0 0, 1em 6em;
+	  }
+	}
+
 }
 a span{
 	color: #46CDCF;
 }
+
+

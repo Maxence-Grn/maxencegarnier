@@ -10,3 +10,40 @@
 	 font-family: "basker";
 	 src: url("./..//fonts/LibreBaskerville-Regular.ttf");
 }
+
+@keyframes left{
+  from{
+    transform: translateX(-1000px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes right{
+  from{
+    transform: translateX(1000px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes top{
+  from{
+    transform: translateY(-1000px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bottom{
+  from{
+    transform: translateY(1000px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
